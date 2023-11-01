@@ -1,5 +1,9 @@
 What is Deep copy and shallow copy in javacript?
 =================================================
+Reference: https://medium.com/version-1/cloning-an-object-in-javascript-shallow-copy-vs-deep-copy-fa8acd6681e9
+
+https://medium.com/@manjuladube/understanding-deep-and-shallow-copy-in-javascript-13438bad941c
+
 Deep Copy:
 -------------
 A deep copy means that all of the values of the new variable are copied and disconnected from the original variable. 
