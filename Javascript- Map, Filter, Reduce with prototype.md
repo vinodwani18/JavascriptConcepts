@@ -7,6 +7,7 @@ https://blog.reeversedev.com/polyfills-for-map-filter-and-reduce-in-javascript
 
 ForEach:
 ----------
+```
 Array.prototype.myForEach = function(callback) {
   // callback here is the callback function
   // which actual .forEach() function accepts
@@ -15,15 +16,19 @@ Array.prototype.myForEach = function(callback) {
   }
 }
 
+```
+
 --------------------------
 
 Map:
 ----------
+
 Array.map function takes a callback function as an argument and that callback function can have three arguments passed into it :
 a. current value
 b. index of the current value [optional]
 c. array [optional]
 
+```
 Array.prototype.myMap = function(callback){
 	let arr =[];
 	for(let i=0; i<this.length; i++){
@@ -31,7 +36,7 @@ Array.prototype.myMap = function(callback){
 	}
 	return arr;
 };
-
+```
 
 ----------------------------------------
 
@@ -43,6 +48,7 @@ a. current value
 b. index of the current value [optional]
 c. array [optional]
 
+```
 Array.prototype.myFilter = function(callback){
 	let arr =[];
 	for(let i=0; i<this.length; i++){
@@ -52,7 +58,7 @@ Array.prototype.myFilter = function(callback){
 	}
 	return arr;
 };
-
+```
 
 ----------------------------------------
 
@@ -67,6 +73,7 @@ Array.reduce function takes two arguement :
 
 2. An initial value.
 
+```
 Array.prototype.myReduce = function (callback, initialValue) {
 	var accumulator = initialValue;
 	for (var i = 0; i < this.length; i++) {
@@ -78,3 +85,4 @@ Array.prototype.myReduce = function (callback, initialValue) {
 	}
 	return accumulator;
 }
+```

@@ -10,37 +10,42 @@ By default, the inbuilt properties of Objects are non-enumerable i.e., they won'
 
 By defaule properties on object is non-enumerable(enumerable: false) when set using defineProperty. 
 
+```
 Object.defineProperty(emp, 'age', {
         value: 22,
         enumerable: false,
     });
-	
+	```
 To make is enumerable we need to set it to true as below.
 
+```
 Object.defineProperty(emp, 'age', {
         value: 22,
         enumerable: true,
     });
+```
 
 ![Enumerable](https://github.com/vinodwani18/JavascriptConcepts/blob/main/Images/Enumerable.png)
 	
-	
+```
 propertyIsEnumerable() method is used to check if the property is enumerable.
 
 emp.propertyIsEnumerable(name);  // true
 emp.propertyIsEnumerable(age);  // false
-
+```
 
 What is Writable in Javascript?
 ====================================
 If writable prerty set to true then the value associated with the property may be changed with an assignment operator. 
 Defaults to false
 
+```
 const emp = {};
 emp.defineProperty(emp, 'property1', {
   value: 42,
   writable: false,
 })
+```
 
 What is configurable in javascript?
 ===================================
@@ -48,6 +53,7 @@ Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Glo
 ---------
 If a configurable is set to true on property then that property can be deleted from the object.
 
+```
 Object.defineProperty( emp, 'a', {
    value: "some value",
    configurable: true,
@@ -69,5 +75,6 @@ delete emp.a;
 // false
 emp
 // Object {a: "some value"}
+```
 
 ![Configurable](https://github.com/vinodwani18/JavascriptConcepts/blob/main/Images/configurable.png)

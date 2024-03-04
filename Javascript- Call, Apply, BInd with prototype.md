@@ -10,6 +10,7 @@ https://medium.com/nerd-for-tech/polyfill-part-3-for-call-apply-and-bind-169a05d
 
 Example: 
 
+```
 let person = {
   firstname: "Vinod",
   lastname: "Wani"
@@ -19,29 +20,32 @@ let printName = function (country) {
   console.log(this.firstname + " " + this.lastname + " from " 
   + country);
 }
+```
 
 Call:
 --------------------
-
+```
 printName.call(person, "India");
-
+```
 Output: 
 "Vinod Wani from India"
 ---------------------------------
 
 Apply:
 -----------------------
+```
 printName.apply(person, ["India"]);
-
+```
 Output: 
 "Vinod Wani from India"
 ---------------------------------------
 
 Bind:
 -----------------------
+```
 let newPrintName = printName.bind(person, "India");
 newPrintName();
-
+```
 Output: 
 "Vinod Wani from India"
 ---------------------------------------
@@ -50,7 +54,7 @@ Output:
 
 Prototype for Call:
 -----------------------
-
+```
 Function.prototype.myCall = function(obj, ...args) {
     if( typeof this !=="function"){ 
 		throw error console.log("not a func");
@@ -60,10 +64,12 @@ Function.prototype.myCall = function(obj, ...args) {
     delete obj.context;
     return result;
 };
+```
 
 
 Prototype for Apply:
 ----------------------------------
+```
 Function.prototype.myApply = function(obj, args) {
     if( typeof this !=="function"){ 
 		throw error console.log("not a func");
@@ -73,10 +79,12 @@ Function.prototype.myApply = function(obj, args) {
     delete obj.context;
     return result;
 };
+```
 
 
 Prototype of Bind:
 ---------------------------------
+```
 Function.prototype.myBind = function (obj, ...args) {
     if( typeof this !=="function"){ 
 		throw error console.log("not a func");
@@ -88,3 +96,4 @@ Function.prototype.myBind = function (obj, ...args) {
     }
     
 }
+```
