@@ -69,3 +69,4 @@ delete emp.a;
 emp
 // Object {a: "some value"}
 
+![Configurable](https://github.com/vinodwani18/JavascriptConcepts/blob/main/Images/configurable.png)
