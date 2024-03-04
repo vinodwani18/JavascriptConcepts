@@ -6,22 +6,23 @@ An enumerable property in JavaScript means that a property can be viewed if it i
 for ex. var emp = { name: "vinod", lastname: 'wani" };
  Object.keys(emp) // ['name', 'lastname']
  
-Every property set on object is non-enumerable when set as below:
-var emp = { name: "vinod", lastname: 'wani" };
+By default, the inbuilt properties of Objects are non-enumerable i.e., they won't be a part of the iteration
 
-By defaule proerties on object is enumerable(enumerable: false) when set using defineProperty. 
+By defaule properties on object is non-enumerable(enumerable: false) when set using defineProperty. 
 
 Object.defineProperty(emp, 'age', {
         value: 22,
         enumerable: false,
     });
 	
-To make is non-enumerable we need to set it to true as below.
+To make is enumerable we need to set it to true as below.
 
 Object.defineProperty(emp, 'age', {
         value: 22,
         enumerable: true,
     });
+
+![Enumerable](https://github.com/vinodwani18/JavascriptConcepts/blob/main/Images/Enumerable.png)
 	
 	
 propertyIsEnumerable() method is used to check if the property is enumerable.
@@ -57,7 +58,7 @@ delete emp.a;
 emp
 // Object {}
 
-If a configurable is set to false on property then that property can not be deleted from the object.
+Note: If a configurable is set to false on property then that property can not be deleted from the object.
 
 Object.defineProperty( emp, 'a', {
    value: "some value",
