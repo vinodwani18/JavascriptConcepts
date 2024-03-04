@@ -3,9 +3,11 @@ What is Enumerable in Javascript?
 Reference: https://blog.reeversedev.com/enumeration-in-javascript
 ----------
 An enumerable property in JavaScript means that a property can be viewed if it is iterated using the for…in loop or Object.keys() method.
+
+```
 for ex. var emp = { name: "vinod", lastname: 'wani" };
  Object.keys(emp) // ['name', 'lastname']
- 
+```
 By default, the inbuilt properties of Objects are non-enumerable i.e., they won't be a part of the iteration
 
 By defaule properties on object is non-enumerable(enumerable: false) when set using defineProperty. 
@@ -24,6 +26,7 @@ Object.defineProperty(emp, 'age', {
         enumerable: true,
     });
 ```
+
 
 ![Enumerable](https://github.com/vinodwani18/JavascriptConcepts/blob/main/Images/Enumerable.png)
 	
@@ -76,5 +79,6 @@ delete emp.a;
 emp
 // Object {a: "some value"}
 ```
+
 
 ![Configurable](https://github.com/vinodwani18/JavascriptConcepts/blob/main/Images/configurable.png)
