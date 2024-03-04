@@ -15,7 +15,7 @@ Object.defineProperty(emp, 'age', {
         value: 22,
         enumerable: false,
     });
-	```
+```
 To make is enumerable we need to set it to true as below.
 
 ```

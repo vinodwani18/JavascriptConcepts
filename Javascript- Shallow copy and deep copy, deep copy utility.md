@@ -19,6 +19,7 @@ That means deeper level object points to same memory location(address).
 Example:
 -----------
 
+```
 var employeeDetailsOriginal = {  name: 'Vinod', age: 33, Profession: 'Software Engineer' };
 
 var employeeDetailsDuplicate = employeeDetailsOriginal; //Shallow copy!
@@ -31,12 +32,13 @@ employeeDetailsDuplicate.name = 'NameChanged';
 
 
 var employeeDetailsDuplicate = { name: employeeDetailsOriginal.name, age: employeeDetailsOriginal.age, Profession: employeeDetailsOriginal.Profession}; //Deep copy!
-
+```
 
 Shallow copy
 -------------
 A shallow copy can be achieved using the spread operator (…) or using Object.assign():
 
+```
 var employeeDetailsOriginal = {age: 25, Profession: 'Software Engineer', name: {fname:"vinod", lname: "wani"}, sayHi: function() {console.log("Hi" + this.name.fname + this.name.lname)}};
 
 const employeeDetailsDuplicate = { ...employeeDetailsOriginal };
@@ -75,6 +77,7 @@ console.log(employeeDetailsDuplicate2); // {
     },
 	"sayHi": f ()
 }
+```
 
 Conclusion:
 -------------
@@ -87,6 +90,7 @@ Deep copy:
 --------------
 A deep copy can be achieved using JSON.parse() + JSON.stringify():
 
+```
 var employeeDetailsOriginal = {age: 25, Profession: 'Software Engineer', name: {fname:"vinod", lname: "wani"}, sayHi: function() {console.log("Hi" + this.name.fname + this.name.lname)}};
 
 const employeeDetailsDeepCopy = JSON.parse(JSON.stringify(employeeDetailsOriginal));
@@ -110,10 +114,12 @@ console.log(employeeDetailsDeepCopy); // {
         "lname": "wani"
     }
 }
+```
 
 We can also create our own utility to create deep copy of the object as shown below:
 ------------------------------------------------------------------------------------
 
+```
 function keepCloning(objectpassed) {
   if (objectpassed === null || typeof objectpassed !== 'object') {
      return objectpassed;
@@ -146,3 +152,4 @@ console.log(employeeDetailsDuplicate); // {
     }
 }
 employeeDetailsOriginal.sayHi();   //  Hivinodwani
+```

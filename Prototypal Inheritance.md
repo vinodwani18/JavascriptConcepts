@@ -27,6 +27,8 @@ How we will get these properties on object? or how we get access for array.lengt
 And these properties are added on prototype.
 
 For ex. if we have below object.
+
+```
 const object = {
 	name: "Vinod",
 	city: "Pune",
@@ -34,6 +36,7 @@ const object = {
 		console.log( "NAME: " + this.name + " CITY: " + this.city + " COUNTRY: " + country);
 	}
 };
+```
 
 Javascript engine will attach name, city, getUserInfo properties to object but along with that it will have more inbuild prperties which can be see in its proto.
 
@@ -41,9 +44,11 @@ Javascript engine will attach name, city, getUserInfo properties to object but a
 
 Lets create one more object as below and add object to its __proto__
 
+```
 const object2 = {
 	name: "Jonn",
 }
+```
 
 ![object2WithItsProperties_inheritance](https://github.com/vinodwani18/JavascriptConcepts/blob/main/Images/object2WithItsProperties_inheritance.png)
 
